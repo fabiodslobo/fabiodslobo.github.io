@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fábio Lobo, dentist. Complex rehabilitation, implant and guided surgery</title>
+<meta name="description" content="Fábio Lobo, dentist in the Paris area. Complex rehabilitation on teeth and implants, implant and guided surgery, soft and hard tissue regeneration, and four-day clinical residencies at LC Dental Academy in Mitry-Mory.">
+<style>
+  :root{
+    --green:#0f3a2e;
+    --green-deep:#0a2820;
+    --moss:#1f5445;
+    --sand:#DFD0B8;
+    --stone:#948979;
+    --paper:#faf7f1;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,"Helvetica Neue",Arial,sans-serif;
+    background:var(--paper);color:var(--green-deep);
+    font-size:17px;line-height:1.62;font-weight:300;
+  }
+  img{max-width:100%;display:block}
+  a{color:var(--moss)}
+
+  .split{display:grid;grid-template-columns:42% 58%;min-height:100vh}
+  .left{
+    position:sticky;top:0;height:100vh;background:var(--green);overflow:hidden;
+  }
+  .left img.photo{width:100%;height:100%;object-fit:cover;object-position:center 25%;opacity:.92}
+  .left .plate{
+    position:absolute;left:0;right:0;bottom:0;padding:36px 34px;
+    background:linear-gradient(transparent,rgba(10,40,32,.9));color:var(--paper);
+  }
+  .left .plate .name{font-size:clamp(26px,3.4vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.05;margin:0}
+  .left .plate .role{font-size:12px;letter-spacing:.26em;text-transform:uppercase;margin:0;color:var(--sand)}
+  /* wordmark set in type, so it takes any background */
+  .wordmark{display:inline-block;margin:0 0 46px;text-align:center}
+  .wordmark .name{
+    font-size:30px;font-weight:800;letter-spacing:-.015em;line-height:1;
+    color:var(--green-deep);white-space:nowrap;
+  }
+  .wordmark .name i{
+    font-family:Georgia,"Iowan Old Style",serif;font-style:italic;font-weight:400;
+    color:var(--moss);padding:0 3px;font-size:.9em;
+  }
+  .wordmark .band{
+    margin-top:8px;background:var(--green);color:#fff;
+    font-size:10px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;
+    padding:7px 12px;
+  }
+  /* same mark, reversed, for the dark half */
+  .wordmark.reverse .name{color:#fff}
+  .wordmark.reverse .name i{color:var(--sand)}
+  .wordmark.reverse .band{background:var(--sand);color:var(--green-deep)}
+
+  .right{padding:9vh 7vw 9vh 5vw;max-width:760px}
+  h2{
+    font-size:11px;letter-spacing:.26em;text-transform:uppercase;font-weight:600;
+    color:var(--stone);margin:0 0 20px;
+  }
+  .lede{font-size:clamp(22px,2.5vw,32px);line-height:1.3;font-weight:200;letter-spacing:-.015em;margin:0 0 26px}
+  p{margin:0 0 18px}
+  section{padding:0 0 8vh}
+  .rule{border:0;border-top:1px solid rgba(148,137,121,.4);margin:0 0 8vh}
+
+  .facts{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+  .facts li{
+    display:flex;gap:16px;align-items:baseline;padding:12px 0;
+    border-bottom:1px solid rgba(148,137,121,.3);
+  }
+  .facts .k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--stone);min-width:120px}
+
+  .card{background:var(--green);color:var(--paper);padding:38px 34px;border-radius:2px}
+  .card h3{margin:0 0 14px;font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-.02em;line-height:1.08}
+  .card p{color:#e6ded0}
+  .card .quote{border-left:2px solid var(--sand);padding-left:16px;font-weight:200;font-size:19px;margin:22px 0}
+  .card .when{display:grid;grid-template-columns:170px 1fr;gap:16px;padding:14px 0;border-top:1px solid rgba(223,208,184,.25);align-items:baseline}
+  .card .when b{font-weight:600;color:var(--sand)}
+
+  .cta{
+    display:inline-block;margin-top:24px;background:var(--sand);color:var(--green-deep);
+    text-decoration:none;padding:15px 26px;font-size:11px;letter-spacing:.22em;
+    text-transform:uppercase;font-weight:600;
+  }
+  .cta.ghost{background:transparent;border:1px solid var(--moss);color:var(--moss)}
+
+  .evenings{list-style:none;padding:0;margin:0}
+  .evenings li{padding:16px 0;border-top:1px solid rgba(148,137,121,.35);display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:baseline}
+  .evenings b{font-weight:600}
+
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+  .pair img{width:100%;aspect-ratio:3/4;object-fit:cover}
+  .pair.rooms img{aspect-ratio:4/3}
+  .wide{margin:12px 0 0}
+  .wide img{width:100%;aspect-ratio:3/2;object-fit:cover}
+  .wide figcaption{font-size:12px;letter-spacing:.06em;color:var(--stone);margin-top:8px}
+  .cases{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:8px}
+  .cases figure{margin:0}
+  .cases img{width:100%;aspect-ratio:3/2;object-fit:cover}
+  .cases figcaption{font-size:12px;letter-spacing:.04em;color:var(--stone);margin-top:7px}
+  .cases .tall img{aspect-ratio:2/3}
+  @media (max-width:620px){ .cases{grid-template-columns:1fr} }
+
+  footer{font-size:15px}
+  .fine{font-size:12px;color:var(--stone);line-height:1.7;margin-top:28px}
+
+  @media (max-width:620px){
+    .evenings li,.card .when{grid-template-columns:1fr;gap:4px}
+  }
+  @media (max-width:900px){
+    .split{grid-template-columns:1fr}
+    .left{position:relative;height:62vh}
+    .right{padding:8vh 22px}
+    .wordmark{margin-bottom:34px}
+    .wordmark .name{font-size:24px}
+    .left .plate{padding:24px 22px}
+  }
+</style>
+</head>
+<body>
+
+<div class="split">
+
+  <div class="left">
+    <img class="photo" src="img/retrato-3x4-web.jpg" alt="Portrait of Fábio Lobo.">
+    <div class="plate">
+      <p class="role">Dentist, DDS · Paris · Mitry-Mory</p>
+    </div>
+  </div>
+
+  <div class="right">
+
+    <div class="wordmark">
+      <div class="name">Fábio<i>S</i>Lobo</div>
+      <div class="band">Oral Rehabilitation</div>
+    </div>
+
+    <section>
+      <h2>What I do</h2>
+      <p class="lede">Complex rehabilitation on teeth and implants, implant and guided surgery, soft and hard tissue regeneration.</p>
+      <p>Most of the time a patient does not need just a simple treatment, they need a global rehabilitation. Often there is a loss of vertical dimension, or an imbalance of the occlusal plane, which brings aesthetic problems as well as functional ones. I think it is our job to tell them what they actually need, and not only what we believe they will accept.</p>
+      <p>I build my own surgical guides and plan in exocad. The prosthetic rehabilitation comes first, the surgical plan second.</p>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2>In short</h2>
+      <ul class="facts">
+        <li><span class="k">Based</span><span>Paris area, France</span></li>
+        <li><span class="k">Practices</span><span>Co-founder of Dental Studio, Montfermeil, and Dentaria, Mitry-Mory</span></li>
+        <li><span class="k">Teaching</span><span>Co-founder, LC Dental Academy, Mitry-Mory, since 2024</span></li>
+        <li><span class="k">Languages</span><span>Portuguese, French, Spanish, English</span></li>
+      </ul>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <div class="card">
+        <h2 style="color:var(--sand)">Clinical residence</h2>
+        <h3>Over the Shoulder</h3>
+        <p>Four days of clinical immersion. You watch the clinical day as it happens, and the programme is built around what you came to learn.</p>
+        <p class="quote">Colleagues come and watch clinical cases done by me live, with nothing to hide.</p>
+        <div class="when"><b>18–21 November 2026</b><span>With Frederico Cardoso</span></div>
+        <div class="when"><b>14–17 October 2026</b><span>Full</span></div>
+        <a class="cta" href="https://linktr.ee/lc.dentalacademy">Ask about a place</a>
+      </div>
+      <div class="pair">
+        <img src="img/DSC02355-web.jpg" alt="Colleagues around the chair during a residency.">
+        <img src="img/DSC00890-web.jpg" alt="Surgery in progress, colleagues watching.">
+      </div>
+      <figure class="wide">
+        <img src="img/residencia-diplomas-web.jpg" alt="Colleagues at the end of a clinical residence, holding their certificates.">
+        <figcaption>End of a clinical residence, Mitry-Mory.</figcaption>
+      </figure>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2>Afterwork series · 19h30</h2>
+      <ul class="evenings">
+        <li><b>18 Sep 2026</b><span>Introduction to endodontics. Dr Duarte Pereira</span></li>
+        <li><b>9 Oct 2026</b><span>Immediate implant or alveolar preservation. Dr Fábio Lobo and Dr Frederico Cardoso</span></li>
+        <li><b>27 Nov 2026</b><span>Increase of vertical dimension, from zero to hero. Dr Fábio Lobo</span></li>
+      </ul>
+      <a class="cta ghost" href="https://linktr.ee/lc.dentalacademy">Register</a>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2>Cases</h2>
+      <ul class="facts">
+        <li><span class="k">More of</span><span>Complex rehabilitations and regenerations</span></li>
+        <li><span class="k">Less of</span><span>Emergencies and simple extractions</span></li>
+        <li><span class="k">Reply</span><span>I answer by email or message within 48 hours</span></li>
+      </ul>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2>From the chair</h2>
+      <p>Five photographs from my own cases, shown with written consent. They are what the work
+      looks like, not a claim about what it achieves.</p>
+      <div class="cases">
+        <figure><img src="img/case-fp1.jpg" alt="Anterior site, sutured."><figcaption>FP1</figcaption></figure>
+        <figure><img src="img/case-emergence-profile.jpg" alt="Anterior teeth with exposed root surfaces."><figcaption>Emergence profile</figcaption></figure>
+        <figure><img src="img/case-connective-tissue-grafts.jpg" alt="Three connective tissue grafts on a board."><figcaption>Connective tissue grafts</figcaption></figure>
+        <figure class="tall"><img src="img/case-fgg.jpg" alt="Surgical site with sutures and an instrument."><figcaption>FGG</figcaption></figure>
+        <figure class="tall"><img src="img/case-implant-emergence-profile.jpg" alt="Occlusal view of a healing site between two teeth."><figcaption>Implant emergence profile</figcaption></figure>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2>Who else teaches here</h2>
+      <p>The academy also brings in speakers from outside. Two are booked for the rest of 2026.</p>
+      <ul class="evenings">
+        <li><b>22&ndash;24 Oct 2026</b><span>Tooth preparation techniques. Dr Jun Iwata</span></li>
+        <li><b>11&ndash;14 Nov 2026</b><span>Aligner mastermind, Paris special edition. Rita Dias Lopes</span></li>
+      </ul>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2>Where you will be</h2>
+      <p>The residence runs in the practice, not in a lecture room. This is where the four days happen.</p>
+      <div class="pair rooms">
+        <img src="img/clinica-gabinete-web.jpg" alt="Treatment room at the practice in Mitry-Mory.">
+        <img src="img/clinica-recepcao-web.jpg" alt="Reception at the practice in Mitry-Mory.">
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <footer>
+      <h2>Contact</h2>
+      <p>LC Dental Academy<br>8 Rue Paul Vaillant Couturier, 77290 Mitry-Mory, France</p>
+      <p><a href="mailto:lc.dentalnetwork@dentaria.fr">lc.dentalnetwork@dentaria.fr</a></p>
+      <p><a href="https://www.instagram.com/fabiodslobo/">@fabiodslobo</a> ·
+         <a href="https://www.instagram.com/lc.dental_academy/">@lc.dental_academy</a></p>
+      <p class="fine">LC Dental Academy is Qualiopi certified.<br>No case is shown without consent, and no result is promised.</p>
+    </footer>
+
+  </div>
+</div>
+
+</body>
+</html>
