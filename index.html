@@ -101,6 +101,9 @@
   .cases img{width:100%;aspect-ratio:3/2;object-fit:cover}
   .cases figcaption{font-size:12px;letter-spacing:.04em;color:var(--stone);margin-top:7px}
   .cases .tall img{aspect-ratio:2/3}
+  .film{margin:0}
+  .film video{width:100%;max-width:420px;height:auto;aspect-ratio:9/16;display:block;background:var(--green-deep)}
+  .film figcaption{font-size:12px;letter-spacing:.04em;color:var(--stone);margin-top:10px}
   @media (max-width:620px){ .cases{grid-template-columns:1fr} }
 
   footer{font-size:15px}
@@ -236,6 +239,20 @@
         <img src="img/clinica-gabinete-web.jpg" alt="Treatment room at the practice in Mitry-Mory.">
         <img src="img/clinica-recepcao-web.jpg" alt="Reception at the practice in Mitry-Mory.">
       </div>
+    </section>
+
+    <hr class="rule">
+
+    <section>
+      <h2>Over the Shoulder, in 39 seconds</h2>
+      <figure class="film">
+        <video controls preload="none" playsinline
+               poster="img/over-the-shoulder-poster.jpg">
+          <source src="img/over-the-shoulder.mp4" type="video/mp4">
+          Your browser cannot play this video. The file is at img/over-the-shoulder.mp4
+        </video>
+        <figcaption>Shown with written consent. Nothing starts loading until you press play.</figcaption>
+      </figure>
     </section>
 
     <hr class="rule">
